@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Angel Velasquez",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-v1", "id": "esp", "top": 35.68, "left": -14.4, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 150.4,
+      "left": 159.2,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "chip-mq2", "id": "mq2", "top": 58.62, "left": 158.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "mq2:VCC", "esp:3V3", "red", [ "h-48", "v124.8", "h-9.6" ] ],
+    [ "mq2:GND", "esp:GND.1", "black", [ "h-38.4", "v105.6" ] ],
+    [ "mq2:D0", "esp:D23", "magenta", [ "h-19.2", "v-28.8", "h-9.6" ] ],
+    [ "mq2:A0", "esp:D4", "orange", [ "h-57.6", "v57.6" ] ],
+    [ "lcd:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "lcd:VCC", "esp:VIN", "red", [ "h-38.4", "v48.1", "h-153.6", "v-48" ] ],
+    [ "lcd:SDA", "esp:D21", "purple", [ "h-19.2", "v-86.2", "h-48", "v-19.2" ] ],
+    [ "lcd:SCL", "esp:D22", "blue", [ "h-28.8", "v-124.5", "h-28.8", "v-19.2" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "mq2",
+  "author": "Angel Velasquez",
+  "pins": [
+    "VCC",
+    "GND",
+    "D0",
+    "A0",
+    "",
+    "",
+    ""
+  ],
+  "controls": [
+    {"id": "gas",       "label": "Smoke/Gas %",           "type": "range", "min": 0, "max": 100, "step": 1},
+    {"id": "threshold", "label": "Clean Air Threshold %", "type": "range", "min": 0, "max": 100, "step": 1}
+  ]
+}
